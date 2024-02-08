@@ -9793,7 +9793,7 @@ async function run() {
     const response = await octokit.rest.issues.create({
       // owner: github.context.repo.owner,
       // repo: github.context.repo.repo,
-      ...github.context.repo,
+      ...github.context.repo, //asi haces un spread de las 2 lineas anteriores
       title,
       body,
       assignees: assignees ? assignees.split("\n") : undefined,
